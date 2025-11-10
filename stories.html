@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Story Atlas — Punk Society</title>
+    <meta
+      name="description"
+      content="Placeholder hub for anonymised neurodivergent stories highlighting where society still needs the upgrade."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="content">
+        <p class="eyebrow">PUNK SOCIETY / THE WORLD ISN'T BROKEN, IT JUST NEEDS AN UPGRADE</p>
+        <h1>The story atlas.</h1>
+        <p class="lede">
+          Soon this page will feature anonymised stories that illustrate where modern systems clash
+          with neurodivergent reality. Each vignette will link to the research highlights and
+          recommended fixes.
+        </p>
+        <div class="cta-group">
+          <a class="cta primary" href="index.html">Back to main site</a>
+          <a class="cta secondary" href="https://github.com/markstokes/punk-society-site/issues/new?template=story.yml"
+            >Submit your story</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="content">
+          <h2>Upcoming structure</h2>
+          <div class="grid contributions">
+            <article>
+              <h3>Healthcare</h3>
+              <p>Booking loops, prescription gaps, diagnostic gatekeeping – sample stories soon.</p>
+            </article>
+            <article>
+              <h3>Government</h3>
+              <p>Benefits portals, ID checks, sanctions workflows placeholders.</p>
+            </article>
+            <article>
+              <h3>Finance</h3>
+              <p>Debt management, bank security resets, fraud team friction forthcoming.</p>
+            </article>
+            <article>
+              <h3>Education & Work</h3>
+              <p>University admin, workplace accommodations, timesheet mazes to be documented.</p>
+            </article>
+            <article>
+              <h3>Energy & Utilities</h3>
+              <p>Meter submissions, penalty tariffs, call queues notes coming soon.</p>
+            </article>
+            <article>
+              <h3>Other stories</h3>
+              <p>Retail, travel, housing examples queued for anonymisation.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel accent">
+        <div class="content two-col">
+          <div>
+            <h2>Publishing approach</h2>
+            <p>
+              Each story excerpt will reference the anonymised ID, neurotype context, affected flow,
+              and a link to the eventual Cognify audit or heuristic run. Placeholder text sits here
+              until the research bundle is ready.
+            </p>
+          </div>
+          <div class="card">
+            <h3>What we’ll show</h3>
+            <ul>
+              <li>Scenario summary (100 words max).</li>
+              <li>Impact + emotional toll.</li>
+              <li>System touchpoints (web, phone, in-person).</li>
+              <li>Suggested upgrade / mitigation.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="content two-col">
+          <div>
+            <h2>Submission pipeline</h2>
+            <p>
+              Until the automated form launches, the GitHub issue template collects stories. n8n
+              will soon route them into the intake repo, anonymise identifiers, and push approved
+              entries here.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Next steps</h3>
+            <ul>
+              <li>Import first batch of anonymised stories.</li>
+              <li>Link each story to a neurotype trait card.</li>
+              <li>Provide “invite to improve” messaging for each sector.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="content">
+        <p class="logo">Punk Society</p>
+        <p>
+          Cultural spark for the Cognify standards movement. Certification pilots begin 2025.
+          Built different, not broken.
+        </p>
+        <p class="small">
+          © <span id="year"></span> Punk Society. Questions? Open an issue on GitHub or reach out through
+          your existing Punk Society contact.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
