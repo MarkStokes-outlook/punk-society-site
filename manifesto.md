@@ -12,13 +12,13 @@ We combine human narrative, structured scoring, and actionable guidance so ND us
 - **Punk Society** — the cultural engine. It tells the stories, runs campaigns like *Install the DLC*, and keeps the mission human.
 - **Cognify** — the standards body. It defines the Cognitive Friction Index, publishes audits, and certifies ND-friendly services.
 
-Both halves feed each other: the movement drives demand; the framework delivers proof.
+Both halves feed each other: the movement drives demand; the framework delivers proof. We call out friction so the world can upgrade itself before we ever name and shame.
 
 ## Design Principles
 1. **ND-led by default.** Lived experience steers research, audits, and certification.
 2. **Truth over theatre.** Findings are evidence-backed, reproducible, and cited.
 3. **Human plus automation.** People spot tone and stress; scripts flag consistency gaps. Both matter.
-4. **Graceful recovery beats perfection.** Systems should forgive lapses and guide users back.
+4. **Grace before blame.** We anonymise stories and invite organisations to learn before we ever call them out by name.
 5. **Transparency first.** Scoring math, audit methods, and conflicts of interest stay public.
 6. **Do no harm.** Stories are anonymised, consented, and handled with care.
 7. **Iteration forever.** The framework evolves as ND testers and clients surface new patterns.
@@ -49,5 +49,7 @@ Both halves feed each other: the movement drives demand; the framework delivers 
 - Volume and diversity of ND testers participating with positive feedback.
 - Organisations adopting ND scorecards in procurement or policy documents.
 
-## Promise
+## Accountability & Promise
+Society isn’t broken; it’s just running the base install. Our job is to ship the upgrade with enough guidance that everyone can install it. We start by sharing anonymous stories and practical fixes. Once Cognify standards are established and organisations have had a fair chance to learn, we’ll hold the stubborn ones publicly accountable.
+
 We will roast bad systems with humour, but we fix them with compassion. The audit network exists to prove that kindness, clarity, and recovery patterns are measurable—and that they change lives when designers listen.

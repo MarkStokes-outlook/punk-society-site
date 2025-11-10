@@ -4,7 +4,7 @@ Public landing site for the Punk Society / ND Audit Network movement.
 This repo powers `www.punk-society.org` on GitHub Pages.
 
 ## Purpose
-- Share the manifesto (`manifesto.md`) and campaign context (“Install the DLC”, Cognitive Revolution).
+- Share the manifesto (`manifesto.html` for public viewing, `manifesto.md` as source) and campaign context (“Install the DLC”, Cognitive Revolution).
 - Explain how Punk Society (culture) and Cognify (framework) work together.
 - Provide immediate calls-to-action for stories, funding, and partnerships.
 - Offer a public intake path using GitHub Issues until the standalone form launches.
