@@ -265,9 +265,15 @@ h1 {
   margin-bottom: 0.35rem;
 }
 
-.scenario-grid .sources {
+.sources {
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.research-cards article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .manifesto-link {
