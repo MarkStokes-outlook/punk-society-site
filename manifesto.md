@@ -9,7 +9,7 @@ Public and private services routinely fail neurodivergent people, not because th
 We combine human narrative, structured scoring, and actionable guidance so ND users can trust the services they rely on—and so builders can see exactly where to improve.
 
 ## Movement & Framework
-- **Punk Society** — the cultural engine. It tells the stories, runs campaigns like *Install the DLC*, and keeps the mission human.
+- **Punk Society** — the cultural engine. It tells the stories, maps cognitive friction, and keeps the mission human.
 - **Cognify** — the standards body. It defines the Cognitive Friction Index, publishes audits, and certifies ND-friendly services.
 
 Both halves feed each other: the movement drives demand; the framework delivers proof. We call out friction so the world can upgrade itself before we ever name and shame.
