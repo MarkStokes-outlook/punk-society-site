@@ -1,0 +1,68 @@
+name: "Share your story"
+description: "Report cognitive friction you experienced so we can prioritise audits."
+title: "[Story] <service or organisation>"
+labels:
+  - story
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us where cognitive friction is wrecking neurodivergent lives. Avoid names or identifiers—keep it anonymised.
+  - type: dropdown
+    id: sector
+    attributes:
+      label: Sector
+      description: What type of service is this?
+      options:
+        - Healthcare
+        - Government
+        - Finance
+        - Education
+        - Energy / Utilities
+        - Housing
+        - Employment
+        - Retail / E-commerce
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: service
+    attributes:
+      label: Service / organisation
+      description: Name the organisation, department, or product (generic labels are fine).
+      placeholder: NHS GP booking portal
+    validations:
+      required: true
+  - type: textarea
+    id: experience
+    attributes:
+      label: What happened?
+      description: Outline the flow you were in, what went wrong, and any hostile patterns.
+      placeholder: Trying to reschedule ADHD meds, phone line looped for 45 minutes…
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: How did this affect you? Missed deadlines, anxiety spikes, fines, etc.
+      placeholder: Missed appointment, had to restart referral, anxiety for days
+    validations:
+      required: true
+  - type: textarea
+    id: consent
+    attributes:
+      label: Publishing consent
+      description: Can we quote an anonymised snippet publicly? Let us know yes/no and any limits.
+      placeholder: Yes, but remove location; or No, keep internal only
+  - type: textarea
+    id: followup
+    attributes:
+      label: Follow-up channel
+      description: Drop a preferred contact (email, Mastodon, Discord) or say “none”.
+      placeholder: none / email@example.com / @handle
+  - type: textarea
+    id: extras
+    attributes:
+      label: Anything else we should know?
+      description: Links to screenshots, news stories, or research welcome.
