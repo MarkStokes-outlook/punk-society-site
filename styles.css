@@ -28,6 +28,47 @@ body {
   font-size: 18px;
 }
 
+.notice {
+  font-size: 0.95rem;
+  color: var(--muted);
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+  background: rgba(255, 77, 138, 0.08);
+  border-radius: 8px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 640px;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid var(--border);
+  padding: 0.85rem 1rem;
+  text-align: left;
+}
+
+.data-table th {
+  background: rgba(255, 255, 255, 0.04);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
 .site-nav {
   position: sticky;
   top: 0;
@@ -203,6 +244,30 @@ h1 {
 .list-card li,
 .card li {
   margin-bottom: 0.5rem;
+}
+
+.scenario-grid {
+  margin-top: 2rem;
+}
+
+.scenario-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.scenario-grid ul {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.scenario-grid li {
+  margin-bottom: 0.35rem;
+}
+
+.scenario-grid .sources {
+  font-size: 0.85rem;
+  color: var(--muted);
 }
 
 .manifesto-link {
