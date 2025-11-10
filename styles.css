@@ -286,6 +286,12 @@ h1 {
   text-decoration: underline;
 }
 
+.merch-grid article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
 .scenario-grid article {
   display: flex;
   flex-direction: column;
