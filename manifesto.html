@@ -33,29 +33,36 @@
           </svg>
           <span>Punk Society</span>
         </a>
+        <button class="burger-menu" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <div class="nav-links">
-          <a href="index.html#why">Why</a>
-          <a href="index.html#map-the-gaps">Map</a>
-          <a href="index.html#share-your-story">Stories</a>
-          <a href="index.html#take-action">Action</a>
-          <a href="manifesto.html">Manifesto</a>
-          <a href="neurodiversity.html">Field notes</a>
-          <a href="stories.html">Story atlas</a>
+          <a href="index.html#why">About</a>
+          <a href="stories.html">Stories</a>
           <a href="resources.html">Resources</a>
-          <a href="living-with.html">Ally guide</a>
-          <a href="merch.html">Merch lab</a>
+          <a href="living-with.html">Allies</a>
+          <a href="manifesto.html">Manifesto</a>
+          <a href="merch.html">Merch</a>
+          <a href="index.html#take-action">Get Involved</a>
         </div>
       </div>
     </nav>
     <header class="hero">
       <div class="content">
-        <p class="eyebrow">PUNK SOCIETY / INSTALLING HUMANITY'S DLC</p>
-        <h1>Upgrade society for every kind of mind.</h1>
+        <p class="eyebrow">PUNK SOCIETY / DECLARATION OF MUTINY</p>
+        <h1>Stop tolerating compliance theatre.</h1>
         <p class="lede">
-          This manifesto sets the intent, design principles, and accountability stance for the Punk
-          Society movement and the Cognify audit framework. Share it with your team, your MPs, and
-          anyone who can help map the friction and install the upgrade.
+          This manifesto is the operating order for anyone who refuses to keep apologising for
+          neurodivergent wiring. It’s the war brief for policy teams, founders, regulators, and
+          rebels who need proof that “inclusive by default” is still fiction.
+          <strong>Circulate it until cognitive accessibility becomes a budget line, not a footnote.</strong>
         </p>
+        <div class="cta-group">
+          <a class="cta primary" href="manifesto.md">Download the playbook</a>
+          <a class="cta secondary" href="index.html#take-action">Join the action queue</a>
+        </div>
       </div>
     </header>
 
@@ -65,14 +72,14 @@
           <article>
             <h2>Why this exists</h2>
             <p>
-              Public and private services routinely fail neurodivergent people, not because screens
-              are unreadable but because the <strong>cognitive contract</strong> is incomplete.
-              Systems assume unlimited executive function, flawless memory, and tolerance for
-              punishment when deadlines are missed.
+              Public and private services still run on a neurotypical fantasy. They assume infinite
+              executive function, flawless memory, and gratitude for punishment when we slip.
+              <strong>That fiction causes bankruptcies, burnout, and funerals.</strong>
             </p>
             <p>
-              We’re here to measure that failure, teach better patterns, and surface the
-              organisations that treat neurodivergent users with respect.
+              This manifesto names the hostile patterns, sets the scoring rules, and removes
+              plausible deniability. We measure, teach, and escalate until respectful systems are
+              cheaper than abusive ones.
             </p>
           </article>
           <article class="card">
@@ -226,6 +233,26 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu toggle
+      const burger = document.querySelector('.burger-menu');
+      const nav = document.querySelector('.nav-links');
+
+      burger.addEventListener('click', () => {
+        const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+        burger.setAttribute('aria-expanded', !isExpanded);
+        burger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('active');
+          nav.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
     </script>
   </body>
 </html>

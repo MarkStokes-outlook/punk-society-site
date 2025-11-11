@@ -33,32 +33,39 @@
           </svg>
           <span>Punk Society</span>
         </a>
+        <button class="burger-menu" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <div class="nav-links">
-          <a href="index.html#why">Why</a>
-          <a href="index.html#map-the-gaps">Map</a>
-          <a href="index.html#share-your-story">Stories</a>
-          <a href="index.html#take-action">Action</a>
-          <a href="manifesto.html">Manifesto</a>
-          <a href="neurodiversity.html">Field notes</a>
-          <a href="stories.html">Story atlas</a>
+          <a href="index.html#why">About</a>
+          <a href="stories.html">Stories</a>
           <a href="resources.html">Resources</a>
-          <a href="living-with.html">Ally guide</a>
-          <a href="merch.html">Merch lab</a>
+          <a href="living-with.html">Allies</a>
+          <a href="manifesto.html">Manifesto</a>
+          <a href="merch.html">Merch</a>
+          <a href="index.html#take-action">Get Involved</a>
         </div>
       </div>
     </nav>
     <header class="hero">
       <div class="content">
-        <p class="eyebrow">PUNK SOCIETY / PATCH NOTES FOR SOCIETY</p>
-        <h1>The story atlas.</h1>
+        <p class="eyebrow">PUNK SOCIETY / RECEIPT CACHE</p>
+        <h1>Your receipts are ammunition.</h1>
         <p class="lede">
-          Soon this page will feature anonymised stories that illustrate where modern systems clash
-          with neurodivergent reality. Each vignette will link to the research highlights and
-          recommended fixes.
+          This atlas is for every ND person fined, ghosted, or gaslit because a system refused to
+          bend. We stack the rage, cross-reference the traits it punishes, and publish the fixes
+          so “policy” can’t shrug anymore. <strong>Every story is leverage.</strong>
+        </p>
+        <p class="lede">
+          If a portal, landlord, or boss broke you, drop the play-by-play and the evidence. We’ll
+          weaponise it, anonymise it, and feed it straight into the audits.
+          <strong>No more polite whispers—only receipts.</strong>
         </p>
         <div class="cta-group">
           <a class="cta secondary" href="https://github.com/markstokes/punk-society-site/issues/new?template=story.yml"
-            >Submit your story</a
+            >Detonate your story</a
           >
         </div>
         <p class="notice">
@@ -78,8 +85,9 @@
           <p class="eyebrow">Research drop</p>
           <h2>Live friction scenarios we’re tracking</h2>
           <p>
-            These summaries pair real stories with the trait clusters they punish and the upgrades
-            we expect services to ship. Cite them when you need to show why Punk Society exists.
+            These dossiers pair real stories with the trait clusters they punish and the upgrades we
+            demand. Drop them in inboxes, procurement docs, or parliamentary briefs whenever someone
+            pretends “inclusive by default” already happened.
           </p>
           <div class="grid scenario-grid">
             <article class="card">
@@ -552,6 +560,26 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu toggle
+      const burger = document.querySelector('.burger-menu');
+      const nav = document.querySelector('.nav-links');
+
+      burger.addEventListener('click', () => {
+        const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+        burger.setAttribute('aria-expanded', !isExpanded);
+        burger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('active');
+          nav.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
     </script>
   </body>
 </html>

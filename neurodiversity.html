@@ -33,17 +33,19 @@
           </svg>
           <span>Punk Society</span>
         </a>
+        <button class="burger-menu" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <div class="nav-links">
-          <a href="index.html#why">Why</a>
-          <a href="index.html#map-the-gaps">Map</a>
-          <a href="index.html#share-your-story">Stories</a>
-          <a href="index.html#take-action">Action</a>
-          <a href="manifesto.html">Manifesto</a>
-          <a href="neurodiversity.html">Field notes</a>
-          <a href="stories.html">Story atlas</a>
+          <a href="index.html#why">About</a>
+          <a href="stories.html">Stories</a>
           <a href="resources.html">Resources</a>
-          <a href="living-with.html">Ally guide</a>
-          <a href="merch.html">Merch lab</a>
+          <a href="living-with.html">Allies</a>
+          <a href="manifesto.html">Manifesto</a>
+          <a href="merch.html">Merch</a>
+          <a href="index.html#take-action">Get Involved</a>
         </div>
       </div>
     </nav>
@@ -398,6 +400,26 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu toggle
+      const burger = document.querySelector('.burger-menu');
+      const nav = document.querySelector('.nav-links');
+
+      burger.addEventListener('click', () => {
+        const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+        burger.setAttribute('aria-expanded', !isExpanded);
+        burger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+
+      // Close menu when clicking a link
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('active');
+          nav.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
     </script>
   </body>
 </html>
