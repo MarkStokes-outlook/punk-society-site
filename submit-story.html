@@ -75,7 +75,7 @@
           <script>
             // Obfuscate URL in JS so it's not plain in the markup and handle inline status feedback
             const u1 = "https://n8n.stoked.tech/";
-            const u2 = "webhook-test/";
+            const u2 = "webhook/";
             const u3 = "punk-society-submission";
             const s1 = "psoc";
             const s2 = "-fx42FJd9pqcZ";
@@ -83,12 +83,18 @@
             document.addEventListener("DOMContentLoaded", () => {
               const form = document.getElementById("ps-form");
               const statusBox = document.getElementById("form-status");
+              const submitBtn = form.querySelector('button[type="submit"]');
 
               const url = u1 + u2 + u3 + "?secret=" + s1 + s2;
               form.action = url;
 
               form.addEventListener("submit", async (event) => {
                 event.preventDefault();
+
+                if (submitBtn) {
+                  submitBtn.disabled = true;
+                  submitBtn.textContent = "Submitting...";
+                }
 
                 if (!statusBox) return;
 
@@ -115,14 +121,30 @@
                   }
 
                   form.reset();
+                  form.classList.add("is-hidden");
+
+                  if (submitBtn) {
+                    submitBtn.disabled = true;
+                    submitBtn.textContent = "Submitted";
+                  }
+
                   statusBox.textContent =
                     "Thank you. Your story has been submitted to the Punk Society audit queue.";
+                  statusBox.classList.remove("notice--error");
+                  statusBox.classList.add("notice--success");
                   statusBox.style.display = "block";
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 } catch (err) {
                   statusBox.textContent =
                     "Something went wrong while submitting. Please try again in a minute.";
+                  statusBox.classList.remove("notice--success");
+                  statusBox.classList.add("notice--error");
                   statusBox.style.display = "block";
+
+                  if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Submit story";
+                  }
                 }
               });
             });
@@ -168,7 +190,7 @@
 
           <div class="form-group">
             <label for="category">Category</label>
-            <select id="category" name="category">
+            <select id="category" name="category" required>
               <option value="work">Work</option>
               <option value="parenting">Parenting</option>
               <option value="driving">Driving</option>

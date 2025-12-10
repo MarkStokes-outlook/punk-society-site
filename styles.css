@@ -37,6 +37,18 @@ body {
   border-radius: 8px;
 }
 
+.notice--success {
+  border-left-color: #22c55e;
+  background: rgba(34, 197, 94, 0.15);
+  color: #bbf7d0;
+}
+
+.notice--error {
+  border-left-color: #ff4d8a;
+  background: rgba(255, 77, 138, 0.15);
+  color: #ffd9e6;
+}
+
 .table-wrapper {
   overflow-x: auto;
   margin: 1.5rem 0;
@@ -440,5 +452,87 @@ h1 {
 
   .cta {
     width: 100%;
+  }
+}
+
+/* Punk Society – story submission form */
+.story-form {
+  max-width: 720px;
+  margin: 2.5rem auto 0;
+  padding: 2rem 2.25rem;
+  border-radius: 1.25rem;
+  background: radial-gradient(circle at top left, rgba(255, 0, 128, 0.18), transparent 55%),
+              radial-gradient(circle at bottom right, rgba(80, 200, 255, 0.16), transparent 55%),
+              rgba(8, 8, 16, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: opacity 0.35s ease, transform 0.35s ease, max-height 0.35s ease;
+  max-height: 2000px;
+  overflow: hidden;
+}
+
+.story-form.is-hidden {
+  opacity: 0;
+  transform: translateY(-8px);
+  max-height: 0;
+}
+
+.story-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.story-form label {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.story-form input,
+.story-form select,
+.story-form textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(5, 5, 12, 0.96);
+  color: inherit;
+  font: inherit;
+}
+
+.story-form textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.story-form input:focus,
+.story-form select:focus,
+.story-form textarea:focus {
+  outline: none;
+  border-color: rgba(255, 0, 128, 0.8);
+  box-shadow: 0 0 0 1px rgba(255, 0, 128, 0.8), 0 0 0 8px rgba(255, 0, 128, 0.15);
+}
+
+.story-form .checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.story-form .checkbox input[type="checkbox"] {
+  width: auto;
+}
+
+.story-form .cta.primary {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .story-form {
+    padding: 1.6rem 1.4rem;
   }
 }
