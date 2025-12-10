@@ -1,0 +1,203 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Submit Your Story — Punk Society</title>
+    <meta
+      name="description"
+      content="Submit your lived experience of cognitive friction to help Punk Society map the systems that punish neurodivergent brains."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav class="site-nav">
+      <div class="content nav-inner">
+        <a class="home-link" href="index.html" aria-label="Punk Society home">
+          <svg class="home-icon" viewBox="0 0 24 24" role="img" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"
+            />
+          </svg>
+          <span>Punk Society</span>
+        </a>
+        <button class="burger-menu" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+          <a href="index.html#why">About</a>
+          <a href="stories.html">Stories</a>
+          <a href="resources.html">Resources</a>
+          <a href="living-with.html">Allies</a>
+          <a href="manifesto.html">Manifesto</a>
+          <a href="merch.html">Merch</a>
+          <a href="#submit">Submit Story</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="content">
+        <p class="eyebrow">PUNK SOCIETY / RECEIPT INTAKE</p>
+        <h1>Drop your story. We’ll weaponise it.</h1>
+        <p class="lede">
+          Tell us where a system broke you, punished you, confused you, overwhelmed you, or made life
+          unnecessarily harder. Your story becomes evidence — anonymised, analysed, and added to the 
+          cognitive friction map so we can force the world to evolve.
+        </p>
+      </div>
+    </header>
+
+    <main id="submit" class="panel">
+      <div class="content">
+        <h2>Submit your story</h2>
+        <p class="notice">
+          We don’t collect IPs. We don’t track. We don’t share raw submissions. Your data exists only 
+          long enough to store in the audit queue.  
+          <strong>All stories are anonymised before use.</strong>
+        </p>
+
+        <form
+          id="ps-form"
+          class="story-form"
+          method="POST"
+          action=""
+        >
+          <script>
+            // obfuscate URL in JS so it's not plain in the markup
+            const u1 = "https://n8n.stoked.tech/";
+            const u2 = "webhook-test/";
+            const u3 = "punk-society-submission";
+            const s1 = "psoc";
+            const s2 = "-fx42FJd9pqcZ";
+            document.addEventListener("DOMContentLoaded", () => {
+              document.getElementById("ps-form").action =
+                u1 + u2 + u3 + "?secret=" + s1 + s2;
+            });
+          </script>
+
+          <div class="form-group">
+            <label for="name">Name or alias (optional)</label>
+            <input type="text" id="name" name="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email (optional, only for follow-up)</label>
+            <input type="email" id="email" name="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="identity">How do you identify?</label>
+            <select id="identity" name="identity">
+              <option value="">Prefer not to say</option>
+              <option value="adhd">ADHD</option>
+              <option value="audhd">AuDHD</option>
+              <option value="autistic">Autistic</option>
+              <option value="neurospicy">Other neurodivergent</option>
+              <option value="neurotypical">Neurotypical</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="scenario_title">Scenario title</label>
+            <input type="text" id="scenario_title" name="scenario_title" required />
+          </div>
+
+          <div class="form-group">
+            <label for="scenario_description">Describe what happened</label>
+            <textarea
+              id="scenario_description"
+              name="scenario_description"
+              rows="6"
+              required
+              placeholder="Where were you? What happened? What broke? What did it cost you emotionally, financially, or mentally?"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category">
+              <option value="work">Work</option>
+              <option value="parenting">Parenting</option>
+              <option value="driving">Driving</option>
+              <option value="waiting">Waiting / queues</option>
+              <option value="money-admin">Money / admin / subscriptions</option>
+              <option value="relationships">Relationships</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="emotional_impact">How did this make you feel? (optional)</label>
+            <textarea
+              id="emotional_impact"
+              name="emotional_impact"
+              rows="4"
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="what_would_help">What would have made this easier? (optional)</label>
+            <textarea
+              id="what_would_help"
+              name="what_would_help"
+              rows="4"
+            ></textarea>
+          </div>
+
+          <div class="form-group checkbox">
+            <label>
+              <input type="checkbox" name="consent_quote" value="yes" required />
+              I consent to my story being anonymised and quoted publicly.
+            </label>
+          </div>
+
+          <button class="cta primary" type="submit">Submit story</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="content">
+        <p class="logo">Punk Society</p>
+        <p>Cultural spark for the Cognify standards movement. Built different, not broken.</p>
+        <p class="small">
+          © <span id="year"></span> Punk Society.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile nav toggle reused
+      const burger = document.querySelector('.burger-menu');
+      const nav = document.querySelector('.nav-links');
+
+      burger.addEventListener('click', () => {
+        const isExpanded = burger.getAttribute('aria-expanded') === 'true';
+        burger.setAttribute('aria-expanded', !isExpanded);
+        burger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          burger.classList.remove('active');
+          nav.classList.remove('active');
+          burger.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
+  </body>
+</html>
