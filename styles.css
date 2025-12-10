@@ -534,6 +534,24 @@ h1 {
 
 @media (max-width: 640px) {
   .story-form {
-    padding: 1.6rem 1.4rem;
+    padding: 1.25rem 1.15rem;
+    margin: 1.75rem auto 0;
+    border-radius: 1rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    gap: 1rem;
+  }
+
+  .story-form label {
+    font-size: 0.9rem;
+  }
+
+  .story-form input,
+  .story-form select,
+  .story-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .story-form textarea {
+    min-height: 6rem;
   }
 }
